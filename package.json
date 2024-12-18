@@ -1,0 +1,23 @@
+{
+  "name": "Internet Pizza Protocol",
+  "version": "1.0.0",
+  "description": "Virtual Pizza Delivery Service",
+  "main": "api/order.js",
+  "scripts": {
+    "start": "node api/order.js",
+    "dev": "node api/order.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "fs": "^0.0.1-security",
+    "interewb-pizza-protocol": "file:",
+    "nodemailer": "^6.9.16",
+    "virtual-pizza-delivery": "file:"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
