@@ -30,7 +30,7 @@ const pizzaMenu = {
 
     price: 9.99,
 
-    image: "public/img/MargPizza.jpeg"
+    image: "https://github.com/eshangonemad/Pizza-Protocol/blob/main/public/img/MargPizza.jpeg?raw=true"
 
   },
 
@@ -40,7 +40,7 @@ const pizzaMenu = {
 
     price: 11.99,
 
-    image: "public/img/pepspiz.jpeg"
+    image: "https://github.com/eshangonemad/Pizza-Protocol/blob/main/public/img/pepspiz.jpeg?raw=true"
 
   },
 
@@ -50,7 +50,7 @@ const pizzaMenu = {
 
     price: 12.99,
 
-    image: "public/img/pasta.jpeg"
+    image: "https://github.com/eshangonemad/Pizza-Protocol/blob/main/public/img/pasta.jpeg?raw=true"
 
   },
 
@@ -60,7 +60,7 @@ const pizzaMenu = {
 
     price: 9.99,
 
-    image: "public/img/lavacake.jpeg"
+    image: "https://github.com/eshangonemad/Pizza-Protocol/blob/main/public/img/lavacake.jpeg?raw=true"
 
   },
 
@@ -70,7 +70,7 @@ const pizzaMenu = {
 
     price: 10.99,
 
-    image: "public/img/prawn pizza.jpeg"
+    image: "https://github.com/eshangonemad/Pizza-Protocol/blob/main/public/img/prawn%20pizza.jpeg?raw=true"
 
   },
 
@@ -80,7 +80,7 @@ const pizzaMenu = {
 
     price: 19.99,
 
-    image: "public/img/cheese.jpeg"
+    image: "https://github.com/eshangonemad/Pizza-Protocol/blob/main/public/img/cheese.jpeg?raw=true"
 
   }
 
