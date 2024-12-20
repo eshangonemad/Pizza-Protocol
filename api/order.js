@@ -63,15 +63,15 @@ async function generateOrderEmail(items) {
       <tr>
         <td style="padding: 10px; border-bottom: 1px solid #ddd;">${pizza.name}</td>
         <td style="padding: 10px; border-bottom: 1px solid #ddd;">${item.quantity}</td>
-        <td style="padding: 10px; border-bottom: 1px solid #ddd;">$${pizza.price.toFixed(2)}</td>
-        <td style="padding: 10px; border-bottom: 1px solid #ddd;">$${itemTotal.toFixed(2)}</td>
+        <td style="padding: 10px; border-bottom: 1px solid #ddd;">${pizza.price.toFixed(2)}</td>
+        <td style="padding: 10px; border-bottom: 1px solid #ddd;">${itemTotal.toFixed(2)}</td>
       </tr>
     `;
   }).join('');
 
   return `
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-      <h1 style="text-align: center; color: #333;">🍕 Your Virtual Pizza Order</h1>
+      <h1 style="text-align: center; color: #333;">?? Your Virtual Pizza Order</h1>
       <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
         <h2 style="margin-top: 0;">Order Summary</h2>
         <table style="width: 100%; border-collapse: collapse;">
@@ -92,7 +92,8 @@ async function generateOrderEmail(items) {
           </tbody>
         </table>
       </div>
-      <p style="text-align: center; color: #666;">Enjoy your virtual pizzas! They're calorie-free! 🎉</p>
+      <p style="text-align: center; color: #666;">Enjoy your virtual pizzas! They're calorie-free!</p>
+      <p>No refunds/no ridiculous ideas</p>
     </div>
   `;
 }
@@ -152,14 +153,14 @@ app.post('/api/order', async (req, res) => {
     const attachments = await prepareAttachments(items);
 
     await transport.sendMail({
-      from: '"Virtual Pizza 🍕" <pizza@pizzaprotocol.xyz>',
+      from: '"Virtual Pizza " <pizza@pizzaprotocol.xyz>',
       to: email,
-      subject: "Your Virtual Pizza Order Has Arrived! 🍕",
+      subject: "Your Virtual Pizza Order Has Arrived!",
       html: htmlContent,
       attachments: attachments
     });
 
-    res.json({ message: "Virtual pizzas sent! Check your email 📧" });
+    res.json({ message: "Virtual pizzas sent! Check your email" });
   } catch (error) {
     console.error('Error sending email:', error);
     res.status(500).json({ message: "Error delivering your virtual pizzas" });
